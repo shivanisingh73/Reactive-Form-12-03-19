@@ -13,7 +13,7 @@ export class EditorComponent implements OnInit {
   registerForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phonenumber: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
+    phonenumber: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10),Validators.pattern('[0-9]+')]),
     line1: new FormControl(''),
     line2: new FormControl(''),
     state: new FormControl(''),
