@@ -8,7 +8,7 @@
       <p *ngIf="f.name.errors.required">!!Name Required!!</p>
     </div>
   </div>
-
+<br>
   <div>
     <label>
       Email:
@@ -29,6 +29,7 @@
       <p *ngIf="f.phonenumber.errors.required">!!PhoneNumber Required!!</p>
       <p *ngIf="f.phonenumber.errors.minlength ">!!PhoneNumber minimum length is 10!!</p>
       <p *ngIf="f.phonenumber.errors.maxlength ">!!PhoneNumber max length is 10!!</p>
+      <p *ngIf="f.phonenumber.errors.pattern ">!!PhoneNumber should be 0-9!!</p>
     </div>
   </div>
   <div>
@@ -111,5 +112,5 @@
   <div>
     <button type="submit" [disabled]="!registerForm.valid">Register</button>
   </div>
-  
+
 </form>
