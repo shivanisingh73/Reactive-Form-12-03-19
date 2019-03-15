@@ -12,11 +12,11 @@
   <div>
     <label>
       Email:
-      <input type="text" formControlName="email">
+      <input type="email" formControlName="email">
     </label>
     <div *ngIf="f.email.errors" class="alert alert-danger">
-      <p *ngIf="f.email.errors.required">!!Email Required!!</p>
-      <p *ngIf="f.email.errors.email">!!Email Invalid!!</p>
+     <p *ngIf="f.email.errors.required">!!Email Required!!</p>
+      <p *ngIf="f.email.errors.pattern">!!Email Invalid!!</p>
     </div>
   </div>
 
